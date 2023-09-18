@@ -1,0 +1,29 @@
+# Laravel_Machinetasks
+<html>
+<head>
+    <title>Rectangle Area Calculator</title>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+    <form method="post" action="">
+        Length: <input type="text" name="length"><br>
+        Width: <input type="text" name="width"><br>
+        <input type="submit" value="Calculate Area">
+    </form>
+
+    <?php
+    // Check if the form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Retrieve length and width values from the form
+        $length = $_POST["length"];
+        $width = $_POST["width"];
+
+        // Calculate the area of the rectangle
+        $area = $length * $width;
+
+        // Display the result using echo
+        echo "The area of the rectangle with length $length and width $width is: $area square units.";
+    }
+    ?>
+</body>
+</html>
